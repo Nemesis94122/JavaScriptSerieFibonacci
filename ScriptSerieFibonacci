@@ -1,4 +1,5 @@
 function generarFibonacci(cantidad) {
+    if (cantidad < 0 || !Number.isInteger(cantidad)) return "Error: Ingrese un número entero positivo.";
     if (cantidad <= 0) return [];
     if (cantidad === 1) return;
     
