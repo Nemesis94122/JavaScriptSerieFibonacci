@@ -1,10 +1,14 @@
 function generarFibonacci(cantidad) {
-    if (cantidad < 0 || !Number.isInteger(cantidad)) return "Error: Ingrese un número entero positivo.";
-    if (cantidad <= 0) return [];
+    if (cantidad < 0 || !Number.isInteger(cantidad) || isNaN(cantidad)) {
+        return "Error: Ingrese un número entero positivo.";
+    }
+    
+    if (cantidad === 0) return [];
     if (cantidad === 1) return;
     
     const serie =;
-for (let i = 2; i < cantidad; i++) {
+    
+    for (let i = 2; i < cantidad; i++) {
         serie.push(serie[i - 1] + serie[i - 2]);
     }
     
@@ -18,13 +22,12 @@ const mostrarRetoInteractiva = () => {
     
     if (typeof resultado === "string") {
         console.error(resultado);
-        alert(resultado); // Muestra el error en una ventana flotante
-    } 
-    else {
+        alert(resultado);
+    } else {
         const mensaje = `Los primeros ${limite} números de Fibonacci son:\n${resultado.join(", ")}`;
         console.log(mensaje);
-        alert(mensaje); // Muestra el resultado en una ventana flotante
+        alert(mensaje);
     }
 };
 
-mostrarReto();
+mostrarRetoInteractiva();
