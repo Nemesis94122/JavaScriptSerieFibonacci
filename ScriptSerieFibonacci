@@ -1,0 +1,5 @@
+function generarFibonacci(cantidad) {
+    if (cantidad <= 0) return [];
+    if (cantidad === 1) return;
+    
+    const serie =;
