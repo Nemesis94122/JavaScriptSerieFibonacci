@@ -10,7 +10,6 @@ for (let i = 2; i < cantidad; i++) {
     return serie;
 }
 
-
 const mostrarReto = () => {
     const limite = 20;
     const resultado = generarFibonacci(limite);
