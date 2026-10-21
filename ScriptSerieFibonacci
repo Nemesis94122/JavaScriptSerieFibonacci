@@ -6,7 +6,7 @@ function generarFibonacci(cantidad) {
     if (cantidad === 0) return [];
     if (cantidad === 1) return;
     
-    const serie =;
+    const serie =[0, 1];
     
     for (let i = 2; i < cantidad; i++) {
         serie.push(serie[i - 1] + serie[i - 2]);
