@@ -3,3 +3,19 @@ function generarFibonacci(cantidad) {
     if (cantidad === 1) return;
     
     const serie =;
+for (let i = 2; i < cantidad; i++) {
+        serie.push(serie[i - 1] + serie[i - 2]);
+    }
+    
+    return serie;
+}
+
+
+const mostrarReto = () => {
+    const limite = 20;
+    const resultado = generarFibonacci(limite);
+    console.log(`Los primeros ${limite} números de Fibonacci son:`);
+    console.log(resultado.join(", "));
+};
+
+mostrarReto();
